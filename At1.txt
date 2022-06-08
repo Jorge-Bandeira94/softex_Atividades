@@ -1,0 +1,33 @@
+premissa 1: aristoteles não é o 1º em quimica
+premissa 2: socrates é 2º ou 3º em física
+premissa 3: platão é 1º ou 2º em matematica
+
+aristóteles não é o 1 nem em quimica nem em matemática, logo é o 1º em Física
+
+aristóteles pode ser 2º ou 3º em química
+sócrates pode ser 2º ou 3º em física
+platão pode ser 1º ou 2º em matematica
+
+Se cada um obteve 1 primeiro lugar 1 segundo lugar e 1 terceiro lugar, logo:
+
+Física: 1º Aristoteles, 2º ?, 3º ?
+
+Química: 1º ?, 2º aristoteles, 3º aristoteles
+
+matemática: 1º Platão, 2º platão, 3º ?
+
+
+Se sócrates perdeu para platão em física, logo:
+
+Física: 1º Aristoteles, 2º Platão, 3º Socrates
+
+Aristoteles não pode repetir a mesma posição (1º) e platão não pode mais ser 
+o 2º lugar, e além disso, precisa ter acertado mais que alguém. Sócrates não também não pode
+mais ser 3º lugar, logo:
+
+Matemática: 1º Platão, 2º Socrates, 3º Aristoteles
+
+Agora resta a ultima combinação:
+
+Química: 1º Sócrates, 2º Aristoteles, 3º Platão
+
