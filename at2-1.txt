@@ -1,0 +1,3 @@
+Como há apenas a variação no número de alunos que gostam de uma materia e de outra, e todas as demais fileiras
+continuam iguais, a única resposta que pode existir neste caso é o número de alunos que gostam da matéria X e da matéria Y mudar,
+assim, um aluno deixou de gostar de uma matéria em detrimento da outra
