@@ -1,0 +1,35 @@
+Elabore um algoritmo que representa um cadastro. Ele deve ler os seguintes dados fornecidos pelo usuário:
+
+- Nome
+- Endereço
+- Cidade
+- CPF
+- RG
+- Idade
+- Nome do pai
+- Nome da mãe
+- Peso
+- Renda bruta
+
+Apresente as informações solicitadas no final do cadastro.
+
+==================================================================
+
+caractere nome, endereco, cidade, nomePai, nomeMae
+inteiro cpf, rg, idade
+real peso, rendaBruta
+
+escreva("Digite na sequência seu nome, endereço, cidade, cpf, rg, idade, nome do pai, nome da mãe, peso e renda bruta: ")
+leia(nome, endereco, cidade, cpf, rg, idade, nomePai, nomeMae, peso, rendaBruta)
+
+escreva("Seus dados estão corretos?
+Nome:", nome,
+"Endereço:", endereco,
+"Cidade :", cidade,
+"CPF :", cpf,
+"RG :", rg,
+"Idade :", idade,
+"Nome do pai :", nomePai,
+"Nome da mãe :", nomeMae,
+"peso :", peso,
+"Renda bruta :", rendaBruta)
