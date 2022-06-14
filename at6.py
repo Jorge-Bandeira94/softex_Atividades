@@ -1,3 +1,7 @@
+# Desenvolvi a questão em python para poder testar as entradas no VsCode
+
+
+# Listas para anotar notas e nome de alunos
 listaA = []
 listaB = []
 listaC = []
@@ -6,6 +10,8 @@ listaAN = []
 listaBN = []
 listaCN = []
 listaDN = []
+
+# Código para anotar todos os nomes e notas, além das turmas
 q = "s"
 while q == "s":
     print("Digite o seu nome e em seguida sua nota e turma:")
@@ -27,7 +33,7 @@ while q == "s":
         listaDN.append(nota)
     q = input("Continuar? (s/n) ")
 
-
+# Código responsável por fazer a comparação dos alunos que tiraram mais que sete
 print("A quantidade de alunos aprovados no vestibular por turma é: ")
 contA = 0
 contB = 0
@@ -50,6 +56,9 @@ for i in listaDN:
         contD += 1
 print("Na turma D há ", contD, " aprovados")
 
+
+# Código para recuperarmos a maior nota de cada array (que representa uma turma) e de acordo com o index da nota, buscar o index do aluno que foram inseridos ao mesmo tempo 
+# mais acima. Aqui também resolvemos o problema da maior nota colocando estes dados num novo array para recuperar o melhor aluno com melhor nota
 print("Deseja saber qual a maior nota por turma? ")
 q1 = input("s/n ")
 melhor_geral = []
