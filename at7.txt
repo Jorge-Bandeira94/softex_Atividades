@@ -1,0 +1,40 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+
+    int numeros[10] = {5,3,1,2,4,0,9,7,8,6};
+    int i, temp, contador, tamanho=10;
+
+
+// Incrementando o contador, ele vai andar todo o array 1 vez
+ for (contador = 1; contador < tamanho; contador++) {
+     // incrementando o i para o avaliador comparar a posição i com i+1. Ele ira andar o array 9 vezes
+     // devido estar no bloco do contador
+   for (i = 0; i < tamanho - 1; i++) {
+     if (numeros[i] > numeros[i + 1]) {
+         // se i é maior que i+1 então trocamos ele de lugar (para a direita)
+         // fazendo uma substituição em três passos, jogando i para uma variavel temporaria
+         // mudando o valor de i pelo de i+1 e trazendo de volta o i da variavel temporaria
+         // para a posição i+1
+       temp = numeros[i];
+       numeros[i] = numeros[i + 1];
+       numeros[i + 1] = temp;
+     }
+   }
+ }
+ // verificando no console
+printf("Ordenação:");
+for (i = 0; i < tamanho; i++) {
+ printf("%4d",numeros[i]);
+}
+
+}
