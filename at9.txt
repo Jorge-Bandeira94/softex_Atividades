@@ -1,0 +1,27 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // criando ponteiro
+    int *num_ptr;
+    
+    // iniciando a variavel com vetor de tamanho 5
+    num_ptr = (int *) malloc(5 * sizeof (int));
+    
+    // realocando a variavel para tamanho 22 de vetor
+    num_ptr = (int *) realloc(num_ptr, 22 * sizeof(int));
+
+    // lipado bloco
+    void free(void *num_ptr);
+    
+    return 0;
+}
