@@ -1,0 +1,18 @@
+grafos são modelos de dados que armazenam e facilitam na manipulação, estruturas com características de ligações entre pontos. Para armazenar esses modelos podemos utilizar duas estruturas de dados: vetores e listas encadeadas.
+Com o exemplo simples de um ponto A se conectar com B, e B se conectar com A, já podemos dizer que temos um grafo. Dizemos que o grafo possui dois vértices (A e B) e uma aresta, que é representada pela ligação entre A e B. 
+
+Agora que temos o conceito de vértice e aresta, podemos definir o conceito de adjacência e custo.
+
+Quando dizemos A->B,  B->C,  C->A, temos:
+
+o ponto A é adjacente ao ponto B, mas o ponto B não é adjacente ao ponto A;
+o ponto B é adjacente ao ponto C, mas o ponto C não é adjacente ao ponto B;
+o ponto C é adjacente ao ponto A, mas o ponto A não é adjacente ao ponto C.
+
+Dizer que o ponto A não é adjacente ao ponto C, não que dizer que A não alcance C, pois o A poderia passar por B para chegar em C.
+
+Além disto, podemos verificar o coentio de custo dos grafos. Se há duas ligações saindo de A, e uma saindo de B, mas com valores: A->(2)->B, A->(5)->C, B->(1)->C, e queremos ir de A a C. Vemos que conseguiríamos chegar até C diretamente (A é adjacente ao ponto C), ou poderíamos passar por B e depois seguir para C. Os custos servem para dar pesos às arestas, ou seja, ir diretamente de A a C, custaria 5, mas poderíamos escolher a rota auxiliar passando por B  que custaria 2+1 (A->B->C): 3.
+
+
+Como exemplos em aplicações tecnológicas temos aplicativos de rotas como o Uber e Waze que utulizam da teoria dos grafos para encontrarem os caminhos mais rápidos custeando as arestas de forma a achar a melhor e mais econômica (tempo e dinheiro) forma de chegar do ponto A ou ponto B.
+Existem aplicações da teoria dos grafos também em áreas mais distantes do cidadão comum, como é o caso da bioinformática. Programas que fazem alinhamento de sequências genéticas a fim de compara espécies mais próximas utilizando similaridade, usam também da teoria dos grafos para pontuar as melhores similaridades entre sequências de DNA comparadas (como a ferramenta Blast do NCBI)
