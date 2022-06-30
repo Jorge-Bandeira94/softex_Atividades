@@ -3,16 +3,19 @@
 # Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.
 
 from logging import raiseExceptions
-from re import A
 
 
 def cadastroAno():
     nome = input('Digite seu nome completo: ')
     ano = int(input('Digite seu ano de nascimento: '))
-    if type(ano) == int:
-        anos = 2022 - ano
-        print('Seu nome é: ', nome, ', e você tem ',
-              anos, ' anos de idade')
+    if ano < 1922 or ano > 2022:
+         print('Este ano não é válido, tente novamente')
+         cadastroAno()
+    else:
+        if type(ano) == int:
+            anos = 2022 - ano
+            print('Seu nome é: ', nome, ', e você tem ',
+                  anos, ' anos de idade')
 
 
 a = True
