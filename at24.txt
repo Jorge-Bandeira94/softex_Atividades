@@ -1,0 +1,22 @@
+Pacote para Biblioteca -----------
+
+package br.biblioteca.telas;
+
+import br.biblioteca.modelo.*;
+
+public class CadastroLivro {
+    Livro novoLivro = new Livro();
+}
+
+
+
+Pacote para pizzaria --------------
+
+package br.negocios.pizzaria;
+
+
+public class AnotaPedido {
+}
+
+private class ProcessaPagamento {
+}
