@@ -1,0 +1,10 @@
+try:
+	with open('arquivo.txt', 'r') as file_object:
+		text = file_object.read()
+		print(text)
+
+except: FileNotFoundError as error:
+	print(error)
+
+except:
+	print('não foi possível localizar o arquivo')
