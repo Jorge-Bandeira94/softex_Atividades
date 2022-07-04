@@ -1,0 +1,13 @@
+public class MyClass {
+    public static void main(String args[]) {
+        FileOutputStream arquivo = new FileOutputStream(c:program_files\jorge\desktop);
+        ObectOutputStream obj = new ObectOutputStream(arquivo1);
+        obj.writeObject(serializavel);
+        obj.close();
+        
+        FileIputStream arquivo = new FileIputStream (c:program_files\jorge\desktop);
+        ObjectInputStream obj = new ObjectInputStream(ler)
+        serializavel obj.redObject()
+        return serializado
+    }
+}
