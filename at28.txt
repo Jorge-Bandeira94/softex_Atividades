@@ -1,0 +1,22 @@
+	Façade (ou Fachada, em português) é um termo muito oriundo da área de Arquitetura. A grosso modo, podemos entender como a parte de fora de uma construção, 
+que isola o mundo exterior o mundo interior. Estruturalmente falando, isolamos partes do sistema (sub-sistema: classes/objetos [biblioteca, framework, 
+API etc.], módulo de um sistema, conjunto de webservices etc.) com o uso de uma fachada (façade) e somente
+através dela (passando por ela) é que temos acesso ao sub-sistema.
+	Façade – ou Fachada – é um Padrão de Projeto (Design Pattern) muito útil e recomendado para projetos de software. É um padrão de projeto estrutural 
+(utilizados na estrutura do sistema).
+
+Objetivos do Façade:
+
+	Abstrair/simplificar a complexidade de um sub-sistema: “pedaços de software” geralmente são complexos, com muito código e muita lógica de difícil compreensão.
+	Muitas das vezes quando usamos (consumimos) um destes pedaços não precisamos conhecer sua estrutura interna, pois nos interessa apenas usar os recursos
+disponíveis. Neste contexto, consumir um componente por exemplo, acessando apenas sua fachada, é muito mais simples do que consumir seus recursos diretamente,
+o que demanda entender a estrutura interna do “pedaço” consumido.
+	Desacoplar o sistema, favorecendo a separação de responsabilidades: um sistema bem projetado tem que ser um sistema desacoplado, com suas partes 
+independentes uma das outras. Um sistema com fraco acoplamento possui uma série de benefícios.Por exemplo, se cada módulo do sistema possui uma fachada 
+para acesso ao seu mundo interno, cada módulo pode ser mantido/distribuído/testado sem a necessidade de carregar-se consigo um mundo de dependências.
+	Reduzir a dependência entre “pedaços” do sistema: Utilizar o façade para isolar estruturalmente os módulos do sistema (ou sub-sistemas) reduz a 
+dependência, dando condições de manter/distribuir/testar isoladamente a parte do sistema que sofreu um ajuste , sem ter que fazer o mesmo com as outras 
+partes do sistema em função de uma alteração pontual.
+
+	O padrão de projeto Façade é um padrão leve, simples e de excelente custo/benefício. Seu uso é altamente recomendável, principalmente pela simplicidade e eficiência na 
+redução do acoplamento e aumento da coesão.
