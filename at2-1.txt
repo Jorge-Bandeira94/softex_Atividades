@@ -1,3 +1,116 @@
-Como há apenas a variação no número de alunos que gostam de uma materia e de outra, e todas as demais fileiras
-continuam iguais, a única resposta que pode existir neste caso é o número de alunos que gostam da matéria X e da matéria Y mudar,
-assim, um aluno deixou de gostar de uma matéria em detrimento da outra
+Site 1: Site Softexrecife.joyclass/app/list:
+
+Elemento em javascript:
+
+<script type="text/javascript">
+    zESettings = {
+      webWidget: {
+        contactForm: {
+          fields: [
+            { "id": 360030231614, prefill: { '*': location.hostname.split('.')[0] } }
+          ]
+        },
+        position: {
+          horizontal: 'right',
+          vertical: 'bottom'
+        },
+        launcher: {
+          label: {
+            'pt-BR': 'Ajuda',
+            'en-US': 'Help'
+          }
+        }
+      }
+    };
+  </script>
+
+
+Elementos na pagina:
+
+1) Input de formulario para pesquisa
+
+<div class="mat-form-field-infix ng-tns-c83-6">
+	<input _ngcontent-lcd-c296="" maxlength="80" matinput="" id="courseFilter" 
+	class="mat-input-element mat-form-field-autofill-control ng-tns-c83-6 
+	cdk-text-field-autofill-monitored" placeholder="Busque pelo nome do curso" 
+	data-placeholder="Busque pelo nome do curso" aria-invalid="false" aria-required="false">
+		<span class="mat-form-field-label-wrapper ng-tns-c83-6">
+		<!---->
+		</span>
+</div>
+
+2) Botão de perfil que abre as opções de cursos e mensagens da pagina
+
+<div _ngcontent-lcd-c140="" class="user">
+	<button _ngcontent-lcd-c140="" aria-haspopup="true" mat-button="" class="mat-focus-indicator 
+	mat-menu-trigger mat-tooltip-trigger mat-button mat-button-base ng-star-inserted">
+		<span class="mat-button-wrapper">
+			<mat-icon _ngcontent-lcd-c140="" role="img" matsuffix="" class="mat-icon notranslate 
+			material-icons mat-icon-no-color ng-star-inserted" aria-hidden="true" data-mat-icon-type="font">
+				account_circle 
+			</mat-icon>
+
+			<span _ngcontent-lcd-c140="" matbadgecolor="warn" matbadgeposition="above before" matbadgesize="small" 
+			matbadgeoverlap="true" class="mat-badge mat-badge-warn mat-badge-overlap mat-badge-above mat-badge-before 
+			mat-badge-small mat-badge-hidden">
+				<span _ngcontent-lcd-c140="" id="mat-badge-content-1" class="mat-badge-content mat-badge-active">
+				</span>
+			</span>
+			<span _ngcontent-lcd-c140="" class="username">
+				Jorge Luís Bandeira da Silva Filho
+			</span>
+		</span>
+		<span matripple="" class="mat-ripple mat-button-ripple">
+		</span>
+		<span class="mat-button-focus-overlay">
+		</span>
+	</button>
+	<mat-menu _ngcontent-lcd-c140="" class="ng-tns-c131-3"><!---->
+	</mat-menu>
+	<mat-menu _ngcontent-lcd-c140="" class="ng-tns-c131-4"><!---->
+	</mat-menu>
+</div>
+
+
+
+
+
+
+Site 2: EDHREC
+
+Elemento javascript:
+
+Google analytics, ferramenta de monitoramento e análise de sites. Ela se integra com outros serviços do Google, como Ads e Search Console. 
+Com ela é possível monitorar o perfil de quem acessa o site.
+
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+
+Elementos na pagina:
+
+1) Div que possui um video no youtube 
+
+<div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
+	<div class="ytp-cued-thumbnail-overlay-image" style="background-image: 
+	url(&quot;https://i.ytimg.com/vi/5yUOGWpnAV4/hqdefault.jpg&quot;);">
+	</div>
+	<button class="ytp-large-play-button ytp-button" aria-label="Reproduzir">
+		<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+			<path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 
+			C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 
+			C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00">
+			</path>
+			<path d="M 45,24 27,14 27,34" fill="#fff">
+			</path>
+		</svg>
+	</button>
+</div>
+
+
+
+2) Subtítulo que conduz para outra página
+<h5 class="ArticlePreview_title__3VPa3">
+	<a href="https://edhrec.com/articles/the-interactive-commander-map/">The Interactive Commander Map</a>
+</h5>
