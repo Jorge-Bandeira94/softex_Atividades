@@ -1,0 +1,5 @@
+Para trabalhar com Js foi escolhido o editor de texto VScode. Para este editor foi adicionado alguns plugins para destaque
+de palavras reservadas em Js de forma  facilitar o desenvolvimento do código. Tmbém foi instalado o Node.js para execução dos
+códigos em java script no VSCode.
+A escolha do vscode se deu por ser flexível e leve, podendo também desenvolver códigos em outras linguagens muito usadas como 
+python.
