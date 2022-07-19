@@ -1,0 +1,25 @@
+1 - 
+
+fibant
+fibatual
+fibprox
+
+for i in range (1, 18):
+	fibprox = fibant + fibatual
+	fibant = fibatual
+	fibatual = fibprox
+	print(fibprox)
+
+
+2 - 
+def insertionSort(array):
+    for step in range(0, len(array)):
+        for j in range (step, len(array)):
+            if array[j] < array[step]:
+                temp = array[step]
+                array[step] = array[j]
+                array[j] = temp
+        
+lista = [25, 7, 32, 78, 101, 1, 27, 56, 30, 12]
+insertionSort(lista)
+print(lista)
