@@ -1,0 +1,181 @@
+1)--------------------------------------------------------------------------------------------------------
+
+variavel1 = input("Digite algo: ")
+variavel2 = input("Digite algo para a segund avariavel: ")
+print("A variavel1 esta contendo o dado: ", variavel1, ", e a variavel 2 o dado: ", variavel2)
+
+temp = variavel1
+variavel1 = variavel2
+variavel2 = temp
+
+print("Agora trocamos, a variavel 1 correpsonde ao dado: ", variavel1, " e a variavel 2 ao dado: ", variavel2)
+
+2)---------------------------------------------------------------------------------------------------------
+listaProdutos = ["Abobora", "Leite", "Maçã", "Ovo"]
+listaPrecos = [10.0, 8.70, 5.50, 12.00]
+carrinhoProd = []
+carrinhoTotal = []
+
+continuar = "y"
+
+while continuar == "y":
+    print("Escolha o produto difitando seu número da lista a seguir: \n 1 - Abobora\n 2 - Leite\n 3 - Maçã\n 4 - Ovo\n")
+    escolha = int(input("Digite aqui: "))
+    if escolha == 1:
+        carrinhoProd.append("Abobora")
+        qtd = int(input("Agora escolha a quantidade: "))
+        valor = listaPrecos[0] * qtd
+        carrinhoTotal.append(valor)
+        continuar = input("DESEJA CONTINUAR? (Y/N)".lower()
+    elif escolha == 2:
+        carrinhoProd.append("Leite")
+        qtd = int(input("Agora escolha a quantidade: "))
+        valor = listaPrecos[1] * qtd
+        carrinhoTotal.append(valor)
+        continuar = input("DESEJA CONTINUAR? (Y/N)".lower()
+    elif escolha == 3:
+        carrinhoProd.append("Maçã")
+        qtd = int(input("Agora escolha a quantidade: "))
+        valor = listaPrecos[2] * qtd
+        carrinhoTotal.append(valor)
+        continuar = input("DESEJA CONTINUAR? (Y/N)".lower()
+    elif escolha == 4:
+        carrinhoProd.append("Ovo")
+        qtd = int(input("Agora escolha a quantidade: "))
+        valor = listaPrecos[3] * qtd
+        carrinhoTotal.append(valor)
+        continuar = input("DESEJA CONTINUAR? (Y/N)".lower()
+
+tot = 0        
+for i in carrinhoTotal:
+    tot += i
+print("Sua compra constou dos seguintes itens: ", carrinhoProd)
+print("Valor total foi de: ", tot)
+    
+
+3) -------------------------------------------------------------------------------------
+variavel1 = int(input("Digite a primeira variavel v1: "))
+variavel2 = int(input("Digite a segundra variavel v2: "))
+print(variavel1 % variavel2)
+
+
+
+if variavel1 % variavel2 == 1:
+    print("A soma das duas variáveis é: ", (variavel1 + variavel2) +  1)
+    
+elif variavel1 % variavel2 == 2:
+    if variavel1 % 2 == 0:
+        print("v1 é par")
+        if variavel2 % 2 == 0:
+            print("v2 é par")
+        else:
+            print("v2 é impar")
+    else:
+        print("v1 é impar")
+        if variavel2 % 2 == 0:
+            print("v2 é par")
+        else:
+            print("v2 é impar")
+elif variavel1 % variavel2 == 3:
+    result = variavel1 + variavel2
+    resultCont = variavel1 * result
+    print("Valor da soma de v1 e v2 multuplicado por v1 é: ", resultCont)
+elif variavel1 % variavel2 == 4:
+    result = variavel1 + variavel2
+    if result != 0:
+        result / variavel2
+        print("A divisão da soma de v1 e v2 por v2 é: ")
+    else:
+        print("Não é possivel dividir por zero")
+else:
+    print("O quadrado de v1 é:", variavel1 * variavel1, "e para o v2 é: ", variavel2 * variavel2)
+
+
+4) -----------------------------------------------------------------------------------------------------------
+
+peso = float(input("Digite o peso do peixe separado por ponto: "))
+tara = float(input("Digite o peso permitido))
+
+if peso > tara:
+    diferencaPeso = peso - tara
+    print("Zezinho devera pagar: R$ ", diferencaPeso * 4)
+else:
+    print("Não há multa a ser aplicada")
+
+
+5)----------------------------------------------------------------------------------------------------------------
+
+indice = float(input("Digite o indice de poulição separa por ponto: (exemplo: 0.5)"))
+
+if indice < 0.3:
+    print("Todas as indústrias podem funcionar normalmente.")
+elif indice >=0.3 and indice < 0.4:
+    print("As industrias do grupo 1 devem suspender suas atividades.")
+elif indice >= 0.4 and indice < 0.5:
+    print("As industrias do grupo 1 e do grupo 2 devem suspender suas atividades.")
+else:
+    print("Todas as indústrias devem suspender suas atividades")
+
+
+6)--------------------------------------------------------------------------------------------------------------------------------------------------------------
+massaMaterial = float(input("Insira a massa do material dividida por ponto: "))
+massadecaida = massaMaterial
+vezes = 1
+
+for i in range(1, int(massaMaterial)):
+    massadecaida -= massadecaida / 2
+    if massadecaida < 0.51:
+        print("No indice", i,"ja é menor que 0.6")
+        print(massadecaida)
+        vezes = i
+        break
+
+tempoSegundos = vezes * 50
+
+tempoMinutos = tempoSegundos / 60
+restoSegundos = tempoSegundos % 60
+restoMinutos = tempoMinutos % 60
+tempoHoras = tempoMinutos / 60
+
+if tempoHoras < 1 and tempoMinutos <= 1:
+    print("Demorará: ", tempoSegundos, "segundos")
+    
+elif tempoHoras < 1 and tempoMinutos > 1:
+    print("Em minutos o tempo será:", int(tempoMinutos), "minutos e ", restoSegundos, "segundos")
+
+else:
+    print("Em horas será: ", int(tempoHoras), "hora(s), ", int(restoMinutos), "minutos e", restoSegundos, "segundos")
+
+7) ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+pessoaCarne = 0.500
+pessoaBebida = 6
+
+quiloCarne = 18
+cadaBebida = 1.70
+
+pessoas = int(input("Quantas pessoas irão a festas? "))
+compraCarne = pessoas * pessoaCarne
+totalCarne = quiloCarne * compraCarne
+print("Lucas gastará: R$", totalCarne, "em carnes")
+
+compraBebida = pessoas * pessoaBebida
+totalBebida = cadaBebida * compraBebida
+print("Lucas gastara: R$ ", totalBebida, "em bebidas")
+
+print("O gasto total será: R$ ", totalBebida + totalCarne)
+
+
+8) ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+altura = float(input("Qual sua altura em metros? (Exemplo: 1.70)"))
+sexo = input("Digite seu sexo: (M/F)").upper()
+
+if sexo == 'M':
+    ideal = (72.7 * altura) - 58
+    print("Seu peso ideal é: ", ideal)
+else:
+    ideal = (62.1 * altura) - 44.7
+    print("Seu peso ideal é: ", ideal)
+    
+
