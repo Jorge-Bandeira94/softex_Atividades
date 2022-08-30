@@ -1,73 +1,39 @@
-//Aplique o padrão de projeto decorator para criar um sanduíche de frango assado com pepperoni e queijo mussarela ralado. O projeto deve seguir os seguintes critérios:
-//- deve imprimir no console: Sanduíche de Carne, Bacon, QueijoMussarelaRalado custa $7,49.
-//- o sanduíche de frango assado custa $4,50.
-//- o ingrediente adicional pepperoni custa $0,99.
-//- o ingrediente adicional queijo mussarela ralado custa $2,00.
-//- crie as classes necessárias: FrangoAssado, Pepperoni e QueijoMussarelaRalado.
+// Crie um adaptador que permita que um objeto do tipo Pato seja usado como se fosse um objeto do tipo Galinha.
+//Siga o exemplo apresentado no Hipertexto 4 e crie as classes AdaptadorPato e AdaptadorPatoDemo para demonstrar o uso da classe AdaptadorPato.
 
-class Sanduiche {
-  constructor(descricao) {
-    this.descricao = descricao
-  }
-  getDescricao() {}
-  getCusto() {}
-}
-
-class FrangoAssado extends Sanduiche {
-  constructor(descricao) {
-    super(descricao)
-    this.custo = 4.5
-  }
-  getDescricao() {
-    return 'Sanduiche de frango assado '
+class Pato {
+  acaoEspecifica() {
+    console.log('qua! qua!')
   }
 }
 
-class decoratorIngredientes extends Sanduiche {
-  getDescricao() {}
-  getCusto() {}
-}
-
-class Pepperoni extends decoratorIngredientes {
-  constructor(descricao) {
-    super(descricao)
-  }
-  getDescricao() {
-    return 'e/com pepperoni '
-  }
-  getCusto() {
-    return 0.99
+class Galinha {
+  FazerCocorico() {
+    console.log('cocoricó!')
   }
 }
 
-class Queijo extends decoratorIngredientes {
-  constructor(descricao) {
-    super(descricao)
+class Adaptar extends Galinha {
+  constructor(Galinha) {
+    super()
+    this.Galinha = Galinha
   }
-  getDescricao() {
-    return 'e/com Queijo '
-  }
-  getCusto() {
-    return 2
+  acaoEspecifica() {
+    return 'comportamento modificado'
   }
 }
 
-let pedidoDescricao = ''
-let pedidoCusto = 0
+function clientCode(animal) {
+  console.log(animal.acaoEspecifica())
+}
 
-// Instanciando um objeto sucessivas vezes, em cada camada são adicionados os dados da subclasse especifica
+//Instanciando um pato
+let animal = new Pato()
+animal.acaoEspecifica()
 
-sanduiche = new FrangoAssado()
-pedidoDescricao += sanduiche.getDescricao()
-pedidoCusto += sanduiche.custo
+//Modificando-o para galinha através do adaptador
+let animal32 = new Adaptar(animal)
+clientCode(animal3)
 
-sanduiche = new Pepperoni()
-pedidoDescricao += sanduiche.getDescricao()
-pedidoCusto += sanduiche.getCusto()
-
-sanduiche = new Queijo()
-pedidoDescricao += sanduiche.getDescricao()
-pedidoCusto += sanduiche.getCusto()
-
-console.log(pedidoDescricao)
-console.log(pedidoCusto)
+//Testando se pato recebeu método de galinha
+animal3.FazerCocorico()
