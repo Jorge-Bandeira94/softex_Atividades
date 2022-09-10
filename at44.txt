@@ -1,0 +1,12 @@
+O Sistema de Gerenciamento de Bancos de Dados é um conjunto de programas que serve para gerenciar um ou mais banco de dados. 
+Defina: dados, banco de dados, modelo de dados, metadados e catálogo de dados.
+
+Dados: Fato registrado do mundo real com algum significado a depender do contexto de sua aplicação
+
+Banco de dados: Um conjunto de dados que possuem relações entre si, podendo ser dividido em banco de dados relacional e não-relacional
+
+modelo de dados: Segundo Silberschatz (2006), um modelo de dados é um conjunto de ferramentas conceituais para descrição de dados, suas 
+relações, semãntica e restrições de consistência. O modelo de dados irá descrever a estrutura lógica e física de um banco de dados.
+
+catálogo de dados: Elemento que possui informações completas de como os dados estão armazenados num banco de dados. Essas informações em 
+específico são chamadas de METADADOS.
