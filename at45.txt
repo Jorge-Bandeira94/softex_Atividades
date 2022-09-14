@@ -1,0 +1,10 @@
+
+1 - Projeto conceitual: Referente a coleta de informações sobre os requisitos do banco de dados, a partir dele é gerado o MER.
+Este modelo simplifica a composição do banco aos usuários. O MER por sua vez é representado através de diagramas com formas geométricas determinadas 
+para entidades (retângulos), atributos (elipses) e relacionamentos (losangos)
+
+2 - Projeto Lógico: Etapa onde o mapeamento do projeto conceitual é feito. Aqui os modelos internos são detalhados por tabelas, regras, relacionamentos, dado das colunas (tamanho e tipo), etc.
+No projeto lógico teremos de forma detalhada o esquema do banco de dados.
+
+3 - Projeto físico: é o nível mais baixo em relação ao usuário final. Aqui são definidas estruturas de armazenamento, indices e a organização dos arquivos no banco. Aqui também estão os scripts que darão inicio a criação de objetos
+, tabelas, colunas, visões, funções, etc.
