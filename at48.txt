@@ -1,0 +1,7 @@
+De acordo com o conteúdo estudado, cite exemplos de Sistemas de Bancos de Dados relacionais e não relacionais (NoSQL).
+
+
+SQL: MySQL, Oracle, PostgreSQL
+
+
+NOSQL: MongoDB, Redis Cassandra
