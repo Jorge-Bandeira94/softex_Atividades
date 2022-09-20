@@ -1,0 +1,30 @@
+1 - SELECT * FROM alunos WHERE nota >= 7.0;
+
+2 - SELECT * FROM alunos WHERE serie = '1º ano' AND nota = 8.0;
+
+3 - SELECT nome, nota FROM aunos;
+
+4 - CREATE TABLE professor {
+id INTERGET PRIMARY KEY,
+nome VARCHAR(50),
+ultNome VARCHAR (50)
+}
+
+5 - CREATE TABLE aluno {
+id INTERGET PRIMARY KEY,
+nome VARCHAR(50),
+ultNome VARCHAR (50)
+}
+
+6 - SELECT * FROM aluno AS a
+FULL OUTER JOIN professor AS p
+
+7 - SELECT * FROM aluno AS a
+INNER JOIN professor AS p
+ON a.materia = b.materia
+
+8 - SELECT * FROM aluno AS a
+FULL OUTER JOIN professor AS p
+ON a.materia = b.materia
+WHERE a.materia IS NULL OR
+p.materia IS NULL
