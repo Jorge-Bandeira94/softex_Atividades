@@ -1,0 +1,17 @@
+Normalização é o processo de organização de dados em um banco de dados. Isso inclui a criação de tabelas e o estabelecimento de relações entre essas tabelas de acordo com as regras projetadas para proteger os dados e tornar o banco de dados mais flexível, eliminando a redundância e a dependência inconsistente.
+
+Dados redundantes desperdiçam espaço em disco e criam problemas de manutenção. Se os dados existentes em mais de um local devem ser alterados, eles devem ser alterados exatamente da mesma maneira em todos os locais. Uma alteração de endereço do cliente é muito mais fácil de implementar se esses dados são armazenados apenas na tabela Clientes e em nenhum outro lugar no banco de dados.
+
+Para normalização dos dados usamos a 1º, 2º e 3º forma normal:
+
+Primeiro formua normal
+- Eliminar grupos repetidos em tabelas individuais.
+- Criar uma tabela separada para cada conjunto de dados relacionados.
+- Identificar cada conjunto de dados relacionados com uma chave primária.
+
+Segundo forma normal
+- Criar tabelas separadas para conjuntos de valores que se aplicam a vários registros.
+- Relacionar essas tabelas com uma chave estrangeira.
+
+Terceira forma normal
+- Eliminar campos que não dependem da chave
