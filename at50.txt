@@ -1,0 +1,45 @@
+
+CREATE TABLE alunos (
+	id INT,
+	nome VARCHAR(25),
+	telefone VARCHAR(8),
+	id_matricula INT,
+	id_materia INT,
+ 	PRIMARY KEY (id),
+	FOREIGN KEY (id_matricula) REFERENCES matriculas(id), 
+	FOREIGN KEY (id_materia) REFERENCES materias(id)
+);
+
+CREATE TABLE materias (
+	id INT,
+	nome VARCHAR(50),
+	responsavel VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE matriculas (
+	id INT,
+	numero VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO alunos (id, nome, telefone, id_matricula, id_materia) VALUES (1, "Jorge", "33782940", 1, 1);
+INSERT INTO alunos (id, nome, telefone, id_matricula, id_materia) VALUES (2, "Lucas", "88976543", 2, 2);
+INSERT INTO alunos (id, nome, telefone, id_matricula, id_materia) VALUES (3, "Ana", "99874903", 1, 3);
+INSERT INTO alunos (id, nome, telefone, id_matricula, id_materia) VALUES (4, "Beatriz", "7765431", 1, 2);
+
+INSERT INTO materias (id, nome, responsavel) VALUES (1, "Biologia", "André");
+INSERT INTO materias (id, nome, responsavel) VALUES (2, "Física", "Fabio");
+INSERT INTO materias (id, nome, responsavel) VALUES (3, "Geografia", "Nestor");
+
+INSERT INTO matriculas (id, numero) VALUES (1, "2727-01");
+INSERT INTO matriculas (id, numero) VALUES (2, "2727-02");
+INSERT INTO matriculas (id, numero) VALUES (3, "2727-03");
+INSERT INTO matriculas (id, numero) VALUES (4, "668-01");
+INSERT INTO matriculas (id, numero) VALUES (5, "668-02");
+INSERT INTO matriculas (id, numero) VALUES (6, "886-03");
+
+SELECT a.nome, b.numero FROM alunos AS a INNER JOIN matriculas AS b ON a.id = b.id;
+SELECT a.nome, b.numero FROM alunos AS a LEFT JOIN matriculas AS b ON a.id = b.id;
+SELECT a.nome, b.numero FROM alunos AS a RIGHT JOIN matriculas AS b ON a.id = b.id;
+SELECT a.nome, b.numero FROM alunos AS a FULL JOIN matriculas AS b ON a.id = b.id;
