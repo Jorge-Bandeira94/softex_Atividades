@@ -1,0 +1,22 @@
+CREATE TABLE clientes (
+	id INT,
+	nome VARCHAR(20),
+	PRIMARY KEY (id),
+	dia VARCHAR(2)
+);
+
+INSERT INTO clientes (id, nome, dia) VALUES (1, 'jorge', '12');
+INSERT INTO clientes (id, nome, dia) VALUES (2, 'lucas', '12');
+INSERT INTO clientes (id, nome, dia) VALUES (3, 'felipe', '12');
+INSERT INTO clientes (id, nome, dia) VALUES (4, 'ana', '02');
+
+
+CREATE FUNCTION soma_clientes (datas VARCHAR(2)) 
+RETURNS INT
+BEGIN
+	DECLARE total INT
+	SELECT COUNT(id) FROM clientes WHERE dia = datas;
+    RETURN total
+END;
+
+SELECT soma_clientes('12') FROM clientes
