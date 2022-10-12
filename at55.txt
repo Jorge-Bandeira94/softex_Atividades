@@ -1,0 +1,8 @@
+Uma empresa está sofrendo ataques que impactam diretamente a sua segurança. Então, ela precisa atualizar as senhas de todos os seus funcionários. 
+Cite pelo menos três métodos para melhorar essas senhas.
+
+Para melhorar as senhas os funcionários podem utilizar
+1 - caracteres especiais nas senhas
+2 - pelo menos 1 letra em caixa alta e 1 minúscula ao longo da senha
+3 - evitar o uso de dados pessoais dentro da senha
+4 - adição de números na senha
