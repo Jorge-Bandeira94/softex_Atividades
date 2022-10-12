@@ -1,0 +1,65 @@
+HTTP é um protocolo de transferência que possibilita que as pessoas que inserem a URL do seu site na Web possam ver os conteúdos e dados que nele existem. 
+A sigla vem do inglês Hypertext Transfer Protocol.
+Esse sistema é a base da comunicação que existe em toda a Internet em que os sites e conteúdos que tragam hiperlinks possam ser encontrados mais facilmente 
+pelo público por meio de um clique do mouse ou um toque na tela.
+Qualquer servidor que você escolha para hospedar o site da sua empresa tem um programa projetado para receber solicitações HTTP. Portanto, um navegador é um 
+cliente HTTP que envia solicitações constantemente ao servidor.
+Assim, quando um usuário acessa ou digita a URL do seu site, o navegador cria uma solicitação HTTP na web e a envia ao endereço de IP indicado pela URL. 
+Dessa forma, o servidor recebe essa solicitação e envia os arquivos associados que, nada mais são, do que os sites que acessamos na Internet
+
+
+
+
+// Api para guardar histório de URLs
+// Comandos para iniciar o projeto: 1 - npm init; 2 - npm i express
+
+//arquivo index.js
+const Express = require('express')
+const roteador = require('./rotas')
+const bodyParser = require('body-parser')
+
+const app = Express()
+
+app.use(bodyParser.json())
+
+app.listen(3333, () => {
+  console.log('Servidor ativo')
+})
+
+app.use('/', roteador)
+
+//arquivo rotas.js
+const roteador = require('express').Router()
+const validar = require('./validar')
+let historico = []
+
+roteador.post('/inserir', (requisicao, resposta) => {
+  // criei esta função de validação para os campos necessários
+  validar(requisicao, resposta)
+  // objeto que recebe especificamente o valor de url e de dataAcesso
+  const site = {
+    url: requisicao.body.url,
+    dataAcesso: requisicao.body.dataAcesso
+  }
+  historico.push(site)
+  resposta.status(201)
+  resposta.send('OK')
+})
+
+// rota para listar meus dados
+roteador.get('/listar', (requisicao, resposta) => {
+  resposta.status(200)
+  resposta.send(historico)
+})
+
+module.exports = roteador
+
+// arquivo validar.js
+function validar(corpo, envio) {
+  if (!corpo.body.url || !corpo.body.dataAcesso) {
+    envio.status(400)
+    throw new Error(`O campo está inválido`)
+  }
+}
+
+module.exports = validar
