@@ -1,0 +1,23 @@
+CREATE TABLE produtos (
+	id INT,
+	nome VARCHAR(20),
+	PRIMARY KEY (id),
+	dataVenda VARCHAR(2),
+    notaFiscal VARCHAR(10)
+);
+
+INSERT INTO produtos (id, nome, dataVenda,notaFiscal) VALUES (1, 'dados', '12', 'emitida');
+INSERT INTO produtos (id, nome, dataVenda,notaFiscal) VALUES (2, 'cartas', '12', 'emitida');
+INSERT INTO produtos (id, nome, dataVenda,notaFiscal) VALUES (3, 'fichas', '12', '');
+INSERT INTO produtos (id, nome, dataVenda,notaFiscal) VALUES (4, 'mesa', '02', '');
+
+
+CREATE PROCEDURE totalProdutos (dia VARCHAR(2))
+SELECT COUNT(id) 
+AS Produtos_vendidos 
+FROM produtos
+WHERE dataVenda = dia
+AND
+notaFiscal = "emitida";
+
+call totalProdutos('12')
