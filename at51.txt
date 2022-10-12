@@ -1,0 +1,16 @@
+Você deve criar uma tabela para executar uma trigger que relacione algum comando, como: 
+insert, select, delete ou update.
+
+CREATE TABLE alunos (
+	nome VARCHAR(50),
+	idade INT,
+	classe VARCHAR(10),
+	matriculado VARCHAR(10)
+);
+
+CREATE TRIGGER matricula AFTER INSERT ON alunos FOR EACH ROW BEGIN
+INSERT INTO alunos (matriculado) VALUES ('sim')
+END;
+
+INSERT INTO alunos (nome, idade, classe) VALUES ('jorge', 28, 'Noite');
+
