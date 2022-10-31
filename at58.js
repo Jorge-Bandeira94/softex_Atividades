@@ -24,7 +24,8 @@ roteador.post('/inserir', (requisicao, resposta) => {
   // objeto que recebe especificamente o valor de url e de dataAcesso
   const site = {
     url: requisicao.body.url,
-    dataAcesso: requisicao.body.dataAcesso
+    dataAcesso: requisicao.body.dataAcesso,
+    id: requisicao.body.id
   }
   historico.push(site)
   resposta.status(201)
@@ -36,6 +37,12 @@ roteador.get('/listar', (requisicao, resposta) => {
   resposta.status(200)
   resposta.send(historico)
 })
+
+roteador.get('/listar:id', (req, res) => {
+  const id = req.params.id
+  req.status(200)
+  res.send(historico[id])
+  
 
 module.exports = roteador
 
