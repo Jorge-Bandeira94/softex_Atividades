@@ -1,0 +1,38 @@
+// Requisição SOAP
+
+POST /webservices/dilbert.asmx HTTP/1.1
+Host: www.gcomputer.net
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://gcomputer.net/webservices/DailyDilbert"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <DailyDilbert xmlns="http://gcomputer.net/webservices/">
+      <ADate>dateTime</ADate>
+    </DailyDilbert>
+  </soap:Body>
+</soap:Envelope>
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+// Resposta SOAP
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <DailyDilbertResponse xmlns="http://gcomputer.net/webservices/">
+      <DailyDilbertResult>string</DailyDilbertResult>
+    </DailyDilbertResponse>
+  </soap:Body>
+</soap:Envelope>
+
+
+
+// Uma vez que temos um cliente SOAP instanciado e configurado para o WSDL de um web service em questão, chamamos algum de seus web methods. 
+// Ao acessar a página do web service (http://www.gcomputer.net/webservices/dilbert.asmx) encontramos dois deles, o DailyDilbert e o TodaysDilbert.
+// Usando o primeiro deles que espera apenas um parâmetro: ADate e retorna apenas um elemento: DailyDilbertResult. Passando o argumento esperado teremos o 
+// retorno desejado.
+
+
